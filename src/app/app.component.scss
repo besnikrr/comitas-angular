@@ -1,0 +1,36 @@
+.layout {
+  display: flex;
+
+  app-side-nav {
+    width: 20%;
+  }
+
+  .main-layout {
+    width: 80%;
+    background-color: #f5f7f7;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    margin: 0 0 0 30px;
+  }
+
+  .heading {
+    color: #3f4749;
+    font-weight: 600;
+  }
+
+  ::ng-deep {
+    .mat-form-field {
+      .mat-form-field-outline {
+        color: #99dade;
+      }
+      .mat-datepicker-toggle {
+        color: #99dade;
+      }
+    }
+  }
+}
+
+

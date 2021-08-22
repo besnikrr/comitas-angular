@@ -1,0 +1,97 @@
+<div class="application">
+  <a class="light">Plan name and description (click here)</a>
+  <h1 class="heading">Company Plan 2020</h1>
+  <p class="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aperiam dignissimos eos esse et exercitationem, nostrum odit quis ratione repudiandae sapiente similique sit tempore ut vel vero voluptas, voluptates!</p>
+  <div class="form" *ngIf="formGroup" [formGroup]="formGroup">
+    <div class="dates">
+      <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Start Year</mat-label>
+        <input matInput formControlName="startDate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-hint>When the plan should start?</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="first-content">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Analysis years</mat-label>
+        <input matInput formControlName="analysisDate" type="number" placeholder="Years">
+        <button class="a">-</button>
+        <button class="b">+</button>
+        <mat-hint>No analysis will be conducted</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Plan duration</mat-label>
+        <input matInput formControlName="planDuration" type="number" placeholder="Year">
+        <button class="a">-</button>
+        <button class="b">+</button>
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Address
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Company name</mat-label>
+          <input matInput type="text" formControlName="companyName" placeholder="Company name">
+          <mat-hint>Your company legal name here</mat-hint>
+        </mat-form-field>
+        <div class="content">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Street</mat-label>
+            <input matInput type="text" formControlName="street" placeholder="Street">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Postcode</mat-label>
+            <input matInput type="number" formControlName="postcode" placeholder="__/____">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Place</mat-label>
+            <input matInput type="text" formControlName="place" placeholder="Place">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Phone number</mat-label>
+            <input matInput type="number" formControlName="phone" placeholder="Phone number">
+            <mat-hint> / 10</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Website</mat-label>
+            <input matInput type="phone" formControlName="website" placeholder="Website">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="Email">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Finance
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-divider></mat-divider>
+
+    <div class="btn">
+      <button mat-raised-button color="accent" class="cancel">Cancel</button>
+      <button mat-raised-button color="primary" class="save">Save as draft</button>
+    </div>
+  </div>
+</div>
